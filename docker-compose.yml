@@ -1,38 +1,37 @@
 services:
-  mc_modded_lite:
+  mc_vanilla_server:
     image: itzg/minecraft-server
-    container_name: mc_modded_lite
+    container_name: mc_vanilla_server
     tty: true
     stdin_open: true
     stop_grace_period: 240s
     env_file:
       - ./.env
     ports:
-      - "25565:25565"
+      - "25566:25565"
     environment:
-      TYPE: AUTO_CURSEFORGE
-      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/cpmoddedlite/files/6561354
-      CF_PARALLEL_DOWNLOADS: 16
-      
-      CF_EXCLUDE_MODS: chat-heads,libipn,betterf3,fusion-connected-textures
- 
+
       EULA: "TRUE"
-      SERVER_NAME: CP Lite
-      MOTD: CP Learn To Tech
+      SERVER_NAME: CP Vanilla
+      MOTD: CP MC Vanilla
       MODE: survival
-      SEED: "64417783"
       ALLOW_FLIGHT: true
       SPAWN_PROTECTION: 8
-      LEVEL: world-2025
+      LEVEL: world-2026
       ONLINE_MODE: true
       ENFORCE_WHITELIST: true
       PLAYER_IDLE_TIMEOUT: 30
       DIFFICULTY: normal
       WHITELIST: |
         Myrddraa1
+        essn23
+        sandpaper223
+        CompViral
       OPS: |
         Myrddraa1
-
+        essn23
+        sandpaper223
+        CompViral
       
       TZ: America/Toronto
       INIT_MEMORY: 3G
