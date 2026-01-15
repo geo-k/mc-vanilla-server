@@ -20,7 +20,7 @@ services:
       LEVEL: world-2026
       ONLINE_MODE: true
       ENFORCE_WHITELIST: true
-      PLAYER_IDLE_TIMEOUT: 30
+      PLAYER_IDLE_TIMEOUT: 0
       DIFFICULTY: normal
       WHITELIST: |
         Myrddraa1
